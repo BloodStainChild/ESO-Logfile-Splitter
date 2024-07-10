@@ -1,0 +1,11 @@
+D:\ESO_LOG_SPLIT_TOOL\Editor\bin\Release\ESOLogSplitter.exe.config
+D:\ESO_LOG_SPLIT_TOOL\Editor\bin\Release\ESOLogSplitter.exe
+D:\ESO_LOG_SPLIT_TOOL\Editor\bin\Release\ESOLogSplitter.pdb
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\Editor.csproj.AssemblyReference.cache
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\Custom_Message.CustomMessage.resources
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\Editor.Form1.resources
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\ESOLogSplitter.Properties.Resources.resources
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\Editor.csproj.GenerateResource.cache
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\Editor.csproj.CoreCompileInputs.cache
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\ESOLogSplitter.exe
+D:\ESO_LOG_SPLIT_TOOL\Editor\obj\Release\ESOLogSplitter.pdb
