@@ -43,7 +43,8 @@ namespace Editor
         public static string OpenedLogFile = "";
         public static int Selected_Log = -1;
         public static int Selected_Zone = -1;
-        public static bool WriteOnlySelected = false;
+        public static bool bWriteOnlySelectedLog = false;
+        public static bool bWriteOnlySelectedZone = false;
         public static bool bIsReadingFile = false;
         public static bool bIsWritingFile = false;
 
@@ -276,7 +277,7 @@ namespace Editor
 
             foreach (var logInfo in LogInfos)
             {
-                if (WriteOnlySelected && Selected_Log != -1 && Selected_Log != logInfo.LogCount)
+                if (bWriteOnlySelectedLog && Selected_Log != -1 && Selected_Log != logInfo.LogCount)
                 {
                     processedLogs++;
                     ReportProgress(processedLogs, totalLogs, worker);
@@ -285,7 +286,7 @@ namespace Editor
 
                 foreach (var zoneChangedInfo in logInfo.ZONE_CHANGED_INFO)
                 {
-                    if (WriteOnlySelected && Selected_Zone != -1 && Selected_Zone != zoneChangedInfo.ZoneCount)
+                    if (bWriteOnlySelectedZone && Selected_Zone != -1 && Selected_Zone != zoneChangedInfo.ZoneCount)
                     {
                         processedLogs++;
                         ReportProgress(processedLogs, totalLogs, worker);
@@ -409,7 +410,8 @@ namespace Editor
             if (string.IsNullOrEmpty(OpenedLogFile) || bIsReadingFile)
                 return;
 
-            WriteOnlySelected = false;
+            bWriteOnlySelectedLog = false;
+            bWriteOnlySelectedZone = false;
             StartLogFileWriting();
         }
         private void saveSelectedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -417,7 +419,11 @@ namespace Editor
             if (string.IsNullOrEmpty(OpenedLogFile) || bIsReadingFile)
                 return;
 
-            WriteOnlySelected = true;
+            bWriteOnlySelectedLog = true;
+
+            if (Selected_Zone != -1)
+                bWriteOnlySelectedZone = true;
+
             StartLogFileWriting();
         }
 
